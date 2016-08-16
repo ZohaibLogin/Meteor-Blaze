@@ -1,0 +1,22 @@
+<template name="topNavbar">
+    <header>
+        <div class="ui inverted segment">
+
+            <div class="ui inverted secondary pointing menu">
+
+              <div class="ui image">
+                  <img src="https://s3.amazonaws.com/assets.audiobox.fm/assets/presskit/logo_800x256_white-4f43827c5f57071d5611cf813e6cb05b.png" height="100" width="100">
+              </div>
+                <a class="item" href="/">
+                    Home
+                  </a>
+                  <a class="item" href="/uploadFile">
+                    Upload
+                  </a>
+                <a class="left item">
+                {{>loginButtons}}
+              </a>
+            </div>
+        </div>
+    </header>
+</template>

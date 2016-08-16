@@ -1,0 +1,13 @@
+<head>
+    <title>AudioBox :: Welcome</title>
+</head>
+
+<body>
+  {{>topNavbar}}
+  {{>applicationLayout}}
+  {{>player}}
+</body>
+
+<template name="applicationLayout">
+  {{> Template.dynamic template=main}}
+</template>

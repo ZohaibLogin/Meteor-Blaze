@@ -1,0 +1,10 @@
+<template name="player">
+  <div id="playerSextion" class="scrollto">
+    {{#each theFiles}}
+        <audio controls id={{this._id}} style="display:none;">
+          <source src="horse.ogg" type="audio/ogg">
+          <source src="{{url}}" type="audio/mpeg">
+        </audio>
+    {{/each}}
+  </div>
+</template>

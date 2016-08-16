@@ -1,0 +1,51 @@
+<template name="fileList">
+    <table border="1" class="ui blue table">
+        <thead>
+            <tr>
+                <th> Name</th>
+                <th> Uploaded date</th>
+                <th> Status</th>
+                <th> Play </th>
+                <th> Action</th>
+                <th> Wave </th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+          {{#each theFiles}}
+            <tr>
+                <td>
+                    {{original.name}}
+                </td>
+
+                <td>
+                    {{uploadedAt}}
+                </td>
+
+                <td>
+                    {{#if isUploaded}}uploaded{{else}}uploading...{{/if}}
+                </td>
+
+                <td>
+                    <button id="playBtn" class="ui basic blue button"><i class="ui play icon"></i> <b>Play</b> </button>
+                </td>
+
+                <td>
+                    <button class="ui button" id="deleteFileButton"> <i class="ui delete icon"></i> Delete</button>
+                </td>
+
+                <td>
+                    {{urlHelper url _id}}
+                    <div id="waveform" class="waveform"></div>
+                </td>
+
+            </tr>
+
+            {{/each}}
+
+        </tbody>
+
+    </table>
+
+</template>
